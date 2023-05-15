@@ -1,0 +1,79 @@
+/* BASIC STYLES HERE */
+p{
+    all: unset;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+    background: rgb(0,36,108);
+    background: linear-gradient(146deg, rgba(0,36,108,1) 0%, rgba(0,23,70,1) 27%, rgba(0,34,101,1) 55%, rgba(0,36,107,1) 69%, rgba(0,34,102,1) 80%, rgba(0,23,70,1) 100%);
+}
+
+header{
+    flex-grow: 1;
+    height: 33dvh;
+    padding: 1rem 0 0 0;
+    align-content: center;
+    text-align: center;
+}
+
+main{
+    flex-grow: 2;
+    height: 67dvh;
+    padding: 2rem 4rem;
+}
+
+header section{
+    height: 100%;
+}
+
+img {
+    height: 100%;
+}
+
+.question-card{
+    background-color: black;
+    color: rgb(225, 225, 225);
+    padding: 0.7rem;
+    border: solid 0.7rem #afafaf;
+    border-radius: 1.2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.45rem;
+}
+
+.answer-card{
+    background-color: black;
+    color: rgb(225, 225, 225);
+    padding: 0.7rem;
+    border: solid 0.4rem #afafaf;
+    border-radius: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.answer-card .option{
+    margin-right: 0.75rem;
+    color: #ecb201;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: 100ms;
+}
+
+.answer-card:hover{
+    background-color: #ecb201;
+    color: black;
+}
+
+.answer-card:hover .option{
+    color: black;
+}
