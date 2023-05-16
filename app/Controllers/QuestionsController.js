@@ -2,6 +2,8 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML, setText } from "../Utils/Writer.js";
 import { questionsService } from "../Services/QuestionsService.js";
 import { appState } from "../AppState.js";
+import { getFormData } from "../Utils/FormHandler.js"
+import { Question } from "../Models/Question.js";
 
 function _drawQuestion(){
     let questionTemplate = ''
@@ -38,6 +40,12 @@ function _drawResults(){
     setHTML('incorrectHTM', incorrect)
 }
 
+function _drawNewGame(){
+    let template = Question.NewGame
+    setHTML('answerCheckHTM', template) 
+}
+
+
 export class QuestionsController{
     constructor(){
         console.log('QuestionsController Online')
@@ -46,10 +54,12 @@ export class QuestionsController{
         appState.on('qNum', _drawQuestion)
         appState.on('gameFin', _drawResults)
 
-        this.questionsFetchApi()
+        // this.questionsFetchApi()
         appState.on('questions', _drawQuestion)
+        appState.on('questions', this.newGameStart)
 
         // _drawQuestion()
+        _drawNewGame()
     }
 
     correctAnswer(){
@@ -71,6 +81,31 @@ export class QuestionsController{
 
     nextQuestion(){
         questionsService.nextQuestion()
+        // @ts-ignore
+        document.getElementById('answerCheckHTM').style.marginTop = '100dvh';
+    }
+
+
+    newGameSetup(){
+        // @ts-ignore
+        document.getElementById('answerCheckHTM').style.marginTop = '0';
+        // @ts-ignore
+        document.getElementById('resultsHTM').style.marginTop = '-100dvh';
+        questionsService.reset()
+        _drawNewGame()
+    }
+
+    newGame(){
+        window.event?.preventDefault()
+        // @ts-ignore
+        const form = window.event.target
+
+        let formData = getFormData(form)
+
+        questionsService.newGame(formData)
+    }
+
+    newGameStart(){
         // @ts-ignore
         document.getElementById('answerCheckHTM').style.marginTop = '100dvh';
     }

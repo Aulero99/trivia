@@ -1,4 +1,22 @@
 /* BASIC STYLES HERE */
+@media (max-width: 768px) {
+    /* header{
+       height: 23dvh !important;
+       padding: 0.75rem 0 0 0 !important;
+    }
+    
+    main{
+       height: 77dvh !important;
+       padding: 0.25rem 0.25rem 0.25rem 0.25rem !important;
+    }
+
+    .question-card{
+        font-size: 1.25rem;
+    }
+     */
+}
+
+
 p{
     all: unset;
 }
@@ -14,16 +32,16 @@ body{
 
 header{
     flex-grow: 1;
-    height: 33dvh;
-    padding: 1rem 0 0 0;
+    height: 34dvh;
+    padding: 2rem 0 0 0;
     align-content: center;
     text-align: center;
 }
 
 main{
     flex-grow: 2;
-    height: 67dvh;
-    padding: 2rem 4rem;
+    height: 66dvh;
+    padding: 2rem 4rem 4rem 4rem;
 }
 
 header section{
@@ -36,7 +54,7 @@ img {
 
 footer {
     z-index: 1;
-    margin-top: 100dvh;
+    /* margin-top: 100dvh; */
     height: 100dvh;
     width: 100dvw;
     position: absolute;
@@ -218,4 +236,58 @@ footer section .incorrect .answer-reveal {
     padding: 1rem;
     font-weight: bold;
     border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.reset {
+    margin-top: 1rem;
+    background-color: black;
+    color: rgb(225, 225, 225);
+    padding: 0.7rem;
+    border: solid 0.4rem black;
+    border-radius: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.reset:hover{
+    background-color: #ecb201;
+    color: black;
+}
+
+.new-game{
+    background: linear-gradient(146deg, rgba(0,36,108,1) 0%, rgba(0,23,70,1) 27%, rgba(0,34,101,1) 55%, rgba(0,36,107,1) 69%, rgba(0,34,102,1) 80%, rgba(0,23,70,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    all:unset;
+}
+
+.new-game .submit {
+    margin-top: 0.75rem;
+    background-color: black;
+    color: rgb(225, 225, 225);
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+    transition: 100ms;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label{
+    margin-top: 0.75rem;
+    font-weight: bold;
+}
+
+.new-game .submit:hover {
+    background-color: #ecb201;
+    color: black;
 }
