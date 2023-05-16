@@ -14,9 +14,12 @@ class AppState extends EventEmitter {
     new Question({"category":"History","type":"multiple","difficulty":"medium","question":"In what year did Neil Armstrong and Buzz Aldrin land on the moon?","correct_answer":"1969","incorrect_answers":["1965","1966","1973"]})
 ]
 
+
   qNum = 0
   correct = 0
   incorrect = 0
+
+  gameFin = undefined
 
 }
 

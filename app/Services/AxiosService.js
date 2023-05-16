@@ -1,6 +1,6 @@
 // @ts-ignore
 export const questionsApi = axios.create({
-    baseURL: 'https://opentdb.com/',
+    baseURL: 'https://opentdb.com',
     timeout: 8000,
     withCredentials: false
   })

@@ -73,7 +73,7 @@ export class Question{
             ${_computeLetter(this.answerKey[3])}:
             </div>
             <p>
-                ${this.correct_answer[2]}
+                ${this.incorrect_answers[2]}
             </p>
             </div> 
         </div>
@@ -91,6 +91,41 @@ export class Question{
         }
 
         return arr
+    }
+
+    get AnswerCheckCorrect(){
+        return /*html*/ `
+        <section class="">
+            <div class="question-check correct">
+            <div class="d-flex flex-column">
+                <h1>Correct</h1>
+    
+                <div class="continue" onclick="app.questionsController.nextQuestion()">CONTINUE</div>
+                
+            </div>
+            </div>
+        </section>
+        `
+    }
+
+    get AnswerCheckIncorrect(){
+        return /*html*/ `
+        <section class="">
+            <div class="question-check incorrect">
+            <div class="d-flex flex-column">
+                <h1>Incorrect</h1>
+                <p>The correct answer was:</p> 
+
+                <div class="answer-reveal">
+                    <span class="identifier">${_computeLetter(this.answerKey[0])}:</span> ${this.correct_answer}
+                </div>
+    
+                <div class="continue" onclick="app.questionsController.nextQuestion()">CONTINUE</div>
+                
+            </div>
+            </div>
+        </section>
+        `
     }
 
 }
