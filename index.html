@@ -24,16 +24,19 @@
   </header>
 
   <main class="container-fluid">
-    <section class="row">
-      <div class="col-12 p-3">
+    <section class="row" id="questionBoardHTM">
+<!-- STUB -->
+      <!-- <div class="col-12 p-3">
         <div class="question-card">
           content
         </div>
-      </div>
-    </section>
-    <section class="row flex-wrap">
+      </div> -->
 
-      <div class="col-6 p-3" onclick="app.questionsController.answer('')">
+    </section>
+
+    <section class="row flex-wrap" id="answerBoardHTM">
+<!-- STUB -->
+      <!-- <div class="col-6 p-3" onclick="app.questionsController.answer('')">
         <div class="answer-card">
           <div class="option">
             A:
@@ -75,16 +78,23 @@
             question 4
           </p>
         </div> 
-      </div>
+      </div> -->
+
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
     integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
   <script src="app/App.js" type="module"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+  integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
